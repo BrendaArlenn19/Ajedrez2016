@@ -1,0 +1,42 @@
+#include<stdio.h>
+
+main()
+{
+int i,j,a,b,m;
+char tabla[8][8];
+printf("Ingrese la fila:n");
+scanf("%d",&a);
+printf("Ingrese la columna:n");
+scanf("%d",&b);
+printf("nn+--+--+--+--+--+--+--+--+n");
+for(i=0;i<=8;i++)
+{
+m=a-i;
+for(j=0;j<=8;j++)
+{
+
+if (a==i && b==j)
+{
+tabla[j]='A';
+}
+else
+{
+tabla[j]=' ';
+}
+printf("| %c",tabla[j]);
+if (j+m==b || j-m==b)
+{
+printf("*");
+}
+else
+{
+printf(" ");
+}
+}
+
+printf("|n");
+printf("+--+--+--+--+--+--+--+--+n");
+}
+getc(stdin);
+getc(stdin);
+}
